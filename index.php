@@ -8,7 +8,8 @@ include('includes/header.php');
         <img src="assets/images/hero.jpg" alt="hero image" class="w-full h-full object-cover">
     </div>
 
-    <div class="relative md:w-2/5 w-full h-full flex flex-col items-start md:space-y-6 space-y-4 md:ml-40 mt-40 md:px-0 px-4">
+    <div
+        class="relative md:w-2/5 w-full h-full flex flex-col items-start md:space-y-6 space-y-4 md:ml-40 mt-40 md:px-0 px-4">
         <p class="md:text-xl text-sm">THE NEXT GENERATION</p>
         <h1 class="md:text-7xl text-3xl font-semibold md:font-bold">YUSHOP<br>
             <span class="txt-rotate md:text-6xl text-2xl font-normal md:font-semibold" data-period="2000"
@@ -60,14 +61,16 @@ include('includes/header.php');
 <!-- <div>categories</div> -->
 
 <!--all product lookout-->
-<div class=" flex md:flex-row flex-col md:space-x-20 space-y-6 justify-center md:px-4 px-2 py-20 w-full h-screen items-stretch">
+<div
+    class=" flex md:flex-row flex-col md:space-x-20 space-y-6 justify-center md:px-4 px-2 py-20 w-full h-screen items-stretch">
     <div class="md:w-1/2 w-full h-full items-center justify-center">
         <img src="assets/images/lookout.jpg" alt="lookout" class="w-full h-full object-cover rounded-[20px]">
     </div>
     <div class="flex md:w-1/2 w-full md:space-y-8 space-y-4 md:px-10 h-auto flex-col items-start justify-center">
         <p class="md:text-xl text-sm">YUSHOP OFFERS MOST EXCEPTIONAL PRODUCTS</p>
         <h2 class="md:text-5xl text-3xl font-medium">Lookout Smart products here,<br> there, everywhere.</h2>
-        <p class="md:text-lg text-sm">Save when you shop the Best Buy Outlet for clearance, open-box, refurbished and pre-owned items save more
+        <p class="md:text-lg text-sm">Save when you shop the Best Buy Outlet for clearance, open-box, refurbished and
+            pre-owned items save more
             with coupons and 70% off. Super value deals 2024.</p>
         <button
             class="items-center bg-blue-500 hover:bg-stone-950 px-6 py-4 rounded-full text-white md:text-2xl text-sm font-medium">
@@ -97,12 +100,15 @@ include('includes/header.php');
             <p class="md:text-xl text-sm text-slate-700">CLIENT'S TESTIMONIALS</p>
             <h2 class="md:text-5xl text-3xl font-medium">5K+ Satisfied Customers<br>Let's Look Reviews</h2>
             <div class="bg-blue-600 h-1 w-40 rounded-full"></div>
-            <p class="md:text-xl text-sm text-slate-700">Loream Save when you shop the Best Buy Outlet for clearance, open-box,
+            <p class="md:text-xl text-sm text-slate-700">Loream Save when you shop the Best Buy Outlet for clearance,
+                open-box,
                 refurbished and pre-owned items save more with coupons and 70% off. Super value deals 2022.</p>
-            <a class="md:text-xl text-lg text-blue-700 md:font-medium hover:text-stone-900" href="#">View All Reviews ></a>
+            <a class="md:text-xl text-lg text-blue-700 md:font-medium hover:text-stone-900" href="#">View All Reviews
+                ></a>
         </div>
         <div class="flex flex-col md:w-1/2 w-full h-auto px-10 space-y-4 justify-center items-center">
-            <div class="flex md:flex-row flex-col space-y-4 items-stretch bg-stone-200 justify-start rounded-[20px] p-4">
+            <div
+                class="flex md:flex-row flex-col space-y-4 items-stretch bg-stone-200 justify-start rounded-[20px] p-4">
                 <div class="flex items-center justify-center h-auto w-full">
                     <img src="assets/images/p1.jpg" alt="testimonial image" class="w-[100px] h-[100px] rounded-full">
                 </div>
@@ -132,75 +138,71 @@ include('includes/header.php');
 </div>
 
 <!--top blogs -->
-<div class=" flex flex-col w-full md:h-screen h-full space-y-6 px-4 py-20 items-center justify-start">
+<div class="flex flex-col w-full md:h-screen h-full space-y-6 px-4 py-20 items-center justify-start">
     <div class="flex flex-col space-y-4">
         <h1 class="md:text-4xl text-3xl font-semibold md:font-bold">Top Blogs</h1>
         <div class="bg-blue-600 md:w-40 w-32 h-1 rounded-full"></div>
     </div>
-    <div class="md:flex-row flex-col h-full w-full md:space-x-10 space-y-6 flex items-center justify-evenly">
-
-        <div class="flex flex-col items-center w-full h-2/3 space-y-2">
-
-            <div class="flex  border-b space-y-4 items-stretch w-full h-full flex-col ">
-                <div class="flex items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
-                    <img src="assets/images/blog.jpg" alt="blogimg" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-2 flex flex-col">
-                    <p class="text-xl font-medium">The Future of the Home Design</p>
-                    <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full w-full p-4">
+        <!-- Blog 1 -->
+        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+            <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
+                <img src="assets/images/blog2.jpg" alt="blogimg" class="w-full h-full object-cover">
             </div>
-            <div class="flex w-full justify-between">
+            <div class="flex flex-col space-y-2 w-full text-start">
+                <p class="text-xl font-medium">The Future of the Home Design</p>
+                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="flex justify-between w-full">
                 <div class="flex items-center space-x-4">
-                    <img src="assets/images/p1.jpg" alt="blog aurtheor" class="w-10 h-10 rounded-full">
-                    <P class="text-sm font-semibold">by Rose Tyler</P>
+                    <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
+                    <p class="text-sm font-semibold">by Rose Tyler</p>
                 </div>
-                <div>january 20, 2024</div>
-            </div>
-        </div>
-        <div class="flex flex-col items-center w-full h-2/3 space-y-2">
-
-            <div class="flex  border-b space-y-4 items-stretch w-full h-full flex-col ">
-                <div class="flex items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
-                    <img src="assets/images/blog1.jpg" alt="blogimg" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-2 flex flex-col">
-                    <p class="text-xl font-medium">The Future of the Home Design</p>
-                    <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="flex w-full justify-between">
-                <div class="flex items-center space-x-4">
-                    <img src="assets/images/p1.jpg" alt="blog aurtheor" class="w-10 h-10 rounded-full">
-                    <P class="text-sm font-semibold">by Rose Tyler</P>
-                </div>
-                <div>january 20, 2024</div>
-            </div>
-        </div>
-        <div class="flex flex-col items-center w-full h-2/3 space-y-2">
-
-            <div class="flex  border-b space-y-4 items-stretch w-full h-full flex-col ">
-                <div class="flex items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
-                    <img src="assets/images/blog2.jpg" alt="blogimg" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-2 flex flex-col">
-                    <p class="text-xl font-medium">The Future of the Home Design</p>
-                    <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="flex w-full justify-between">
-                <div class="flex items-center space-x-4">
-                    <img src="assets/images/p1.jpg" alt="blog aurtheor" class="w-10 h-10 rounded-full">
-                    <P class="text-sm font-semibold">by Rose Tyler</P>
-                </div>
-                <div>january 20, 2024</div>
+                <div>January 20, 2024</div>
             </div>
         </div>
 
+        <!-- Blog 2 -->
+        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+            <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
+                <img src="assets/images/blog3.jpg" alt="blogimg" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col space-y-2 w-full text-start">
+                <p class="text-xl font-medium">The Future of the Home Design</p>
+                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="flex justify-between w-full">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
+                    <p class="text-sm font-semibold">by Rose Tyler</p>
+                </div>
+                <div>January 20, 2024</div>
+            </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+            <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
+                <img src="assets/images/blog1.jpg" alt="blogimg" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col space-y-2 w-full text-start">
+                <p class="text-xl font-medium">The Future of the Home Design</p>
+                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="flex justify-between w-full">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
+                    <p class="text-sm font-semibold">by Rose Tyler</p>
+                </div>
+                <div>January 20, 2024</div>
+            </div>
+        </div>
     </div>
+
+
 </div>
 
 <!--trusted companies-->
