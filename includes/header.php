@@ -17,7 +17,7 @@
 <body>
 
     <!--header-->
-    <div class="fixed z-50 bg-slate-50/50 backdrop-blur-sm w-full shadow-md flex items-center justify-between px-10 py-4 ">
+    <div class="fixed z-50 bg-white/50 backdrop-blur-md w-full shadow-md flex items-center justify-between px-10 py-4 ">
         <i class="fa-solid fa-bars md:hidden text-2xl cursor-pointer" id="navBtn"></i>
 
         <div class="text-2xl font-bold">YUSHOP</div>
@@ -27,7 +27,7 @@
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Shop</a></li>
                 <li id="categories" class="text-lg font-medium hover:text-blue-600"><a href="#">Categories</a>
                     <div id="dropdownContent"
-                        class="hidden origin-top-right absolute right-0 mt-2 w-56 mx-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        class="hidden origin-top-right absolute  w-56 mx-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                 role="menuitem">Link 1</a>
@@ -46,8 +46,10 @@
                             class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
-        <i class="fa-solid fa-cart-shopping text-2xl md:mr-2 text-blue-700 cursor-pointer md:hidden"
-            id="mobileCartBtn"></i>
+        <div class="md:hidden">
+            <i class="fa-solid fa-cart-shopping text-2xl md:mr-2 text-blue-700 cursor-pointer"
+                id="mobileCartBtn"></i>
+        </div>
         <div class="items-center md:flex hidden">
             <div class="flex items-center justify-center space-x-6">
                 <a class="cursor-pointer text-lg font-medium" href="#"><i

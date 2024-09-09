@@ -58,7 +58,6 @@ include('includes/header.php');
 </div>
 
 <!--category carasol-->
-<!-- <div>categories</div> -->
 
 <!--all product lookout-->
 <div
@@ -80,18 +79,11 @@ include('includes/header.php');
 </div>
 
 <!--trending items carasoul-->
-<!-- <div>
-    <h1>Shop Our Trending Items</h1>
-    <div>
-        <div>
-            <img src="">
-            <p>product title</p>
-            <p>description</p>
-            <span>stars rating</span>
-            <p>price</p>
-        </div>
-    </div>
-</div> -->
+<div class="flex flex-col items-center justify-center space-y-6 w-full md:h-screen ">
+    <h1 class="md:text-4xl font-bold ">Shop Our Trending Items</h1>
+    <?php include('includes/top_product.php') ?>
+</div>
+
 
 <!--testimonials-->
 <div class="w-full md:h-screen h-full bg-gray-100 py-20 items-center justify-center">
@@ -143,61 +135,61 @@ include('includes/header.php');
         <h1 class="md:text-4xl text-3xl font-semibold md:font-bold">Top Blogs</h1>
         <div class="bg-blue-600 md:w-40 w-32 h-1 rounded-full"></div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full w-full p-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full w-full md:p-4">
         <!-- Blog 1 -->
-        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+        <div class="flex flex-col items-center justify-between md:p-4 space-y-4">
             <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
                 <img src="assets/images/blog2.jpg" alt="blogimg" class="w-full h-full object-cover">
             </div>
             <div class="flex flex-col space-y-2 w-full text-start">
-                <p class="text-xl font-medium">The Future of the Home Design</p>
-                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                <p class="text-lg md:text-xl font-medium">The Future of the Home Design</p>
+                <a class="md:text-lg text-sm hover:text-stone-800 text-blue-700" href="#">Continue Reading <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="flex justify-between w-full">
+            <div class="flex items-center justify-between w-full">
                 <div class="flex items-center space-x-4">
                     <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
                     <p class="text-sm font-semibold">by Rose Tyler</p>
                 </div>
-                <div>January 20, 2024</div>
+                <div class="md:text-lg text-sm">January 20, 2024</div>
             </div>
         </div>
 
         <!-- Blog 2 -->
-        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+        <div class="flex flex-col items-center justify-between md:p-4 space-y-4">
             <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
                 <img src="assets/images/blog3.jpg" alt="blogimg" class="w-full h-full object-cover">
             </div>
             <div class="flex flex-col space-y-2 w-full text-start">
-                <p class="text-xl font-medium">The Future of the Home Design</p>
-                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                <p class="text-lg md:text-xl font-medium">The Future of the Home Design</p>
+                <a class="md:text-lg text-sm hover:text-stone-800 text-blue-700" href="#">Continue Reading <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="flex justify-between w-full">
+            <div class="flex items-center justify-between w-full">
                 <div class="flex items-center space-x-4">
                     <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
                     <p class="text-sm font-semibold">by Rose Tyler</p>
                 </div>
-                <div>January 20, 2024</div>
+                <div class="md:text-lg text-sm">January 20, 2024</div>
             </div>
         </div>
 
         <!-- Blog 3 -->
-        <div class="flex flex-col items-center justify-between p-4 space-y-4">
+        <div class="flex flex-col items-center justify-between md:p-4 space-y-4">
             <div class="flex flex-col items-center justify-center w-full h-auto rounded-[20px] overflow-hidden">
                 <img src="assets/images/blog1.jpg" alt="blogimg" class="w-full h-full object-cover">
             </div>
             <div class="flex flex-col space-y-2 w-full text-start">
-                <p class="text-xl font-medium">The Future of the Home Design</p>
-                <a class="text-lg font-md text-blue-700" href="#">Continue Reading <i
+                <p class="text-lg md:text-xl font-medium">The Future of the Home Design</p>
+                <a class="md:text-lg text-sm hover:text-stone-800 text-blue-700" href="#">Continue Reading <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="flex justify-between w-full">
+            <div class="flex items-center justify-between w-full">
                 <div class="flex items-center space-x-4">
                     <img src="assets/images/p1.jpg" alt="blog author" class="w-10 h-10 rounded-full">
                     <p class="text-sm font-semibold">by Rose Tyler</p>
                 </div>
-                <div>January 20, 2024</div>
+                <div class="md:text-lg text-sm">January 20, 2024</div>
             </div>
         </div>
     </div>
@@ -209,37 +201,6 @@ include('includes/header.php');
 <div>Trusted companies carasoul</div>
 
 <!--footer section-->
-<div>
-    <div>
-        <div>
-            <h2>Company</h2>
-            <p>About Us</p>
-            <p>Careers</p>
-            <p>Affilites</p>
-            <p>Blog</p>
-        </div>
-        <div>
-            <h2>Shop</h2>
-            <p>Appliances</p>
-            <p>Gedgets</p>
-            <p>Wearables</p>
-            <p>Shop All</p>
-        </div>
-        <div>
-            <h2>Support</h2>
-            <p>Contact Us</p>
-            <p>Returns</p>
-            <p>Frequently Asked Questions</p>
-            <p>Privacy</p>
-        </div>
-        <div>
-            icons
-        </div>
-    </div>
-
-</div>
-
-<script src="js/script.js"></script>
-</body>
-
-</html>
+<?php
+include('includes/footer.php')
+    ?>

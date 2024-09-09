@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.star {
+  display: flex;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+.card-list .card-item {
+  list-style: none;
+  height: 100%;
+}
+.card-list .card-item .card-link {
+  display: block;
+  background: #fff;
+  padding: 10px;
+  user-select: none;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 0.2px solid rgb(215, 215, 215);
+   transition: 0.2s ease;
+}
+.product_action_btn {
+  position:absolute;
+  opacity: 0;
+  visibility: hidden;
+  right: 0;
+  padding-top: 100px;
+  padding-right: 20px;
+  height: 100%;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  i {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    margin-top: 2px;
+    justify-content: center;
+  }
+}
+.product_action_btn i:hover{
+  background-color: black;
+}
+.card-item:hover .product_action_btn{
+  opacity:1;
+  visibility: visible;
+}
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+.card-list .card-item .card-link:hover {
+  border-color: #5372f0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+.card-list .card-link .card-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 300px;
+}
+.card-list .card-link .badge {
+  color: #5372f0;
+  width: fit-content;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  font-weight: 500;
+  background: #dde4ff;
+  margin: 16px 0 18px;
+}
+.card-list .card-link .badge-designer {
+  color: #b22485;
+  background: #f7dff5;
+}
+.card-list .card-link .badge-marketer {
+  color: #b25a2b;
+  background: #ffe3d2;
+}
+.card-list .card-link .badge-gamer {
+  color: #205c20;
+  background: #d6f8d6;
+}
+.card-list .card-link .badge-editor {
+  color: #856404;
+  background: #fff3cd;
+}
+.card-list .card-link .card-title {
+  color: #000;
+  font-size: 1.19rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.card-list .card-link .star {
+  color: gold;
+  margin-top: 10px;
+}
+.card-list .card-link .price {
+  color: rgb(121, 119, 119);
+  margin-top: 10px;
+}
+.card-list .card-link:hover .card-button {
+  color: #fff;
+  background: #5372f0;
+}
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #5372f0;
+}
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.card-wrapper .swiper-slide-button {
+  color: #5372f0;
+  margin-top: -35px;
+}
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+  .card-wrapper {
+    margin: 0 10px 25px;
+  }
+  .card-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
