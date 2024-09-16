@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUSHOP</title>
+
+    <base href="http://localhost/MIS/" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -18,14 +20,17 @@
 
     <!--header-->
     <div class="fixed z-50 bg-white/50 backdrop-blur-md w-full shadow-md flex items-center justify-between px-10 py-4 ">
-        <i class="fa-solid fa-bars md:hidden text-2xl cursor-pointer" id="navBtn"></i>
 
+        <!-- mobile menu btn -->
+        <div class="md:hidden">
+            <i class="fa-solid fa-bars text-2xl cursor-pointer" id="navBtn"></i>
+        </div>
         <div class="text-2xl font-bold">YUSHOP</div>
         <nav class="items-center md:flex hidden">
             <ul class="flex items-center space-x-6">
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Home</a></li>
-                <li class="text-lg font-medium hover:text-blue-600"><a href="#">Shop</a></li>
-                <li id="categories" class="text-lg font-medium hover:text-blue-600"><a href="#">Categories</a>
+                <li class="text-lg font-medium hover:text-blue-600"><a href="pages/shop.php">Shop</a></li>
+                <!-- <li id="categories" class="text-lg font-medium hover:text-blue-600"><a href="#">Categories</a>
                     <div id="dropdownContent"
                         class="hidden origin-top-right absolute  w-56 mx-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
@@ -37,30 +42,29 @@
                                 role="menuitem">Link 3</a>
                         </div>
                     </div>
-                </li>
+                </li> -->
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Track Order</a></li>
-                <li class="text-lg font-medium hover:text-blue-600"><a href="#">Blog</a></li>
+                <li class="text-lg font-medium hover:text-blue-600"><a href="/blog.php">Blog</a></li>
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">About</a></li>
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Contact</a></li>
-                <li class="text-lg font-medium hover:text-blue-600"><a href="#" id="searchBtn"><i
-                            class="fa-solid fa-magnifying-glass"></i></a></li>
+
+                <li class="text-lg font-medium hover:text-blue-600" id="searchBtn"><i
+                        class="fa-solid fa-magnifying-glass"></i></li>
             </ul>
         </nav>
         <div class="md:hidden">
-            <i class="fa-solid fa-cart-shopping text-2xl md:mr-2 text-blue-700 cursor-pointer"
-                id="mobileCartBtn"></i>
+            <i class="fa-solid fa-cart-shopping text-2xl md:mr-2 text-blue-700 cursor-pointer" id="mobileCartBtn"></i>
         </div>
         <div class="items-center md:flex hidden">
             <div class="flex items-center justify-center space-x-6">
-                <a class="cursor-pointer text-lg font-medium" href="#"><i
-                        class="fa-solid fa-arrows-rotate text-xl"></i></a>
-                <a class="cursor-pointer text-lg font-medium" href="#" id="wishBtn"><i
-                        class="fa-regular fa-heart text-xl"></i></a>
-                <a class="cursor-pointer text-lg font-medium z-30" href="#" id="showMenu"><i
-                        class="fa-regular fa-user text-xl mr-2"></i>Sign In</a>
+                <p class="cursor-pointer text-lg font-medium"><i class="fa-solid fa-arrows-rotate text-xl"></i></p>
+                <p class="cursor-pointer text-lg font-medium" id="wishBtn"><i class="fa-regular fa-heart text-xl"></i>
+                </p>
+                <p class="cursor-pointer text-lg font-medium z-30" id="showMenu"><i
+                        class="fa-regular fa-user text-xl mr-2"></i>Sign In</p>
                 <button id="cartBtn" class="items-center bg-blue-500 px-4 py-2 rounded-full text-white">
-                    <a class="text-lg font-medium" href="#"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i>cart
-                        $0.00</a>
+                    <p class="text-lg font-medium"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i>cart
+                        $0.00</p>
                 </button>
             </div>
 

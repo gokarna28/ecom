@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+
+    <div class="w-40 bg-slate-200 relative">
+        <span onclick="showProduct()" class="flex items-center justify-between cursor-pointer">
+            Products <i class="fa fa-chevron-down down"></i>
+        </span>
+        <ul>
+            <li class="items list-none hover:text-blue-700 transition-all ease-in-out duration-300 hidden"><a href="#">Add
+                    Products</a></li>
+            <li class="items list-none hover:text-blue-700 transition-all ease-in-out duration-300 hidden"><a href="#">Add
+                    Products</a></li>
+            <li class="items list-none hover:text-blue-700 transition-all ease-in-out duration-300 hidden"><a href="#">Add
+                    Products</a></li>
+            <li class="items list-none hover:text-blue-700 transition-all ease-in-out duration-300 hidden"><a href="#">Add
+                    Products</a></li>
+            <li class="items list-none hover:text-blue-700 transition-all ease-in-out duration-300 hidden"><a href="#">Add
+                    Products</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        function showProduct() {
+            const items = document.querySelectorAll('.items');
+            items.forEach(item => {
+                item.classList.toggle('hidden'); 
+            });
+        }
+    </script>
+    
+</body>
+
+</html>

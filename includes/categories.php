@@ -6,7 +6,7 @@
   <title></title>
   <!-- Linking SwiperJS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/slider.php">
+  <link rel="stylesheet" href="assets/css/slider.php">
 </head>
 <body>
   <div class="container swiper">
@@ -57,6 +57,6 @@
   <!-- Linking SwiperJS script -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Linking custom script -->
-  <script src="js/slider.js"></script>
+  <script src="assets/js/slider.js"></script>
 </body>
 </html>

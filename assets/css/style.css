@@ -1,0 +1,65 @@
+/* for side bar toggle */
+/* Initial state of the sidebar: hidden off-screen */
+#loginRegister {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(100%); /* Move sidebar off-screen to the right */
+  opacity: 0;
+}
+
+/* Class to show the sidebar */
+#loginRegister.show {
+  transform: translateX(0); /* Move sidebar into view */
+  opacity: 1;
+}
+
+/* cart */
+#cartMenu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(100%); /* Move sidebar off-screen to the right */
+  opacity: 0;
+}
+
+/* Class to show the sidebar */
+#cartMenu.show {
+  transform: translateX(0); /* Move sidebar into view */
+  opacity: 1;
+}
+
+/* wishlist */
+#wishMenu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(100%); /* Move sidebar off-screen to the right */
+  opacity: 0;
+}
+
+/* Class to show the sidebar */
+#wishMenu.show {
+  transform: translateX(0); /* Move sidebar into view */
+  opacity: 0;
+}
+
+/* search */
+#searchMenu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateY(-100%); /* Move sidebar off-screen to the right */
+  opacity: 0;
+}
+
+/* Class to show the sidebar */
+#searchMenu.show {
+  transform: translateY(0); /* Move sidebar into view */
+  opacity: 1;
+}
+
+/* Mobile Nav Menu */
+#navMenu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(-100%); /* Move sidebar off-screen to the right */
+  opacity: 0;
+}
+
+/* Class to show the sidebar */
+#navMenu.show {
+  transform: translateX(0); /* Move sidebar into view */
+  opacity: 1;
+}
