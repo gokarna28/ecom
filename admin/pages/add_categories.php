@@ -12,7 +12,7 @@
 
     <div class="md:flex hidden w-[20vw]"></div>
 
-    <!-- add product form  -->
+    <!-- add category form  -->
     <div class="bg-slate-50 md:w-[80vw] w-full p-4 rounded-md">
         <div class="bg-slate-200 p-4 rounded-md">
             <h2 class="text-lg font-medium">Fill all the category details</h2>

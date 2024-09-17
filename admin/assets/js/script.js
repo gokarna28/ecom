@@ -1,14 +1,3 @@
-//categories dropdown
-function showCategory() {
-    const CategoryList = document.getElementById('categoryList');
-    if (CategoryList.style.maxHeight === '0px' || !CategoryList.style.maxHeight) {
-        CategoryList.style.maxHeight = CategoryList.scrollHeight + 'px'; 
-        CategoryList.style.opacity = 1;
-    } else {
-        CategoryList.style.maxHeight = '0px'; 
-        CategoryList.style.opacity = 0; 
-    }
-}
 
 
 //product dropdowns
@@ -21,4 +10,10 @@ function showProduct() {
         ProdictList.style.maxHeight = '0px'; 
         ProdictList.style.opacity = 0; 
     }
+}
+
+
+//Confirm the delete category
+function confirmDeleteCategory(){
+    return confirm('Are you sure, You want to delete the category!');
 }

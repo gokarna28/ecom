@@ -10,25 +10,12 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="flex items-start space-x-6">
-                <div class="w-full relative">
-                    <span onclick="showCategory()" class="flex items-center justify-between cursor-pointer">
-                        <i class="fa-solid fa-list"></i>
-
-                        Categories <i class="fa fa-chevron-down down text-sm"></i>
-                    </span>
-                    <ul class="flex flex-col pl-10 overflow-hidden transition-all ease-in-out duration-300 max-h-0 opacity-0"
-                        id="categoryList">
-                        <li class="mt-4 text-lg list-none hover:text-blue-600 transition-all ease-in-out duration-300">
-                            <a href="pages/add_categories.php">Add Categories</a>
-                        </li>
-                        <li class="mt-4 text-lg list-none hover:text-blue-600 transition-all ease-in-out duration-300">
-                            <a href="#">View Categories</a>
-                        </li>
-
-                    </ul>
-                </div>
+            <li><a class="flex items-center space-x-6" href="pages/add_categories.php">
+                    <i class="fa-solid fa-list"></i>
+                    <p>Categories</p>
+                </a>
             </li>
+
             <li class="flex items-center space-x-6">
                 <div class="w-full relative">
                     <span onclick="showProduct()" class="flex items-center justify-between cursor-pointer">
@@ -41,7 +28,7 @@
                             <a href="pages/add_product.php">Add Products</a>
                         </li>
                         <li class="mt-4 text-lg list-none hover:text-blue-600 transition-all ease-in-out duration-300">
-                            <a href="#">View Products</a>
+                            <a href="pages/view_product.php">View Products</a>
                         </li>
 
                     </ul>

@@ -23,7 +23,7 @@
 
 <body class="bg-slate-50">
     <!-- header  -->
-    <div class="p-4 border shadow-lg flex justify-between items-center fixed top-0 w-full">
+    <div class="p-4 border bg-white shadow-lg flex justify-between items-center fixed top-0 w-full">
         <div class=" md:flex hidden w-[20vw]"></div>
 
         <div class="w-1/2 border rounded-full px-6 py-2 flex items-center justify-between sapce-x-6">
