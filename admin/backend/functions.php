@@ -69,7 +69,8 @@ if (isset($_POST['addCategory'])) {
 function Product_category_form()
 {
     include('../../connection.php');
-    $sql = "SELECT cate_name, id FROM mis_category";
+
+    $sql = "SELECT DISTINCT cate_name, cate_id FROM mis_category";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
         $stmt->execute();
@@ -77,7 +78,7 @@ function Product_category_form()
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 ?>
-                <option value="<?php echo $row['id'] ?>"><?php echo $row['cate_name'] ?></option>
+                <option value="<?php echo $row['cate_id'] == $c_id ? 'selected' : ''; ?>"><?php echo $row['cate_name'] ?></option>
                 <?php
             }
         } else {
@@ -95,8 +96,8 @@ function get_product()
 
     $sql = "SELECT * FROM
     mis_product p
-    INNER JOIN mis_category c ON p.pro_category=c.id
-    ORDER BY p.id DESC";
+    INNER JOIN mis_category c ON p.pro_category=c.cate_id
+    ORDER BY pro_id DESC";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
         $stmt->execute();
@@ -106,24 +107,35 @@ function get_product()
             while ($row = $result->fetch_assoc()) {
                 ?>
                 <tr class="border-t border-white hover:bg-gray-400">
-                    <td class="border p-4"><?php echo $n++ ?></td>
-                    <td class="border p-4"><?php echo $row['pro_name'] ?></td>
+                    <td class="border p-4"><?php echo $n ?></td>
+                    <td class="border w-28 h-full"><img src="admin/<?php echo $row['pro_image'] ?>" class="w-full h-full object-cover">
+                    </td>
                     <td class="border p-4"><?php echo $row['pro_name'] ?></td>
                     <td class="border p-4"><?php echo $row['cate_name'] ?></td>
                     <td class="border p-4"><?php echo $row['pro_price'] ?></td>
                     <td class="border p-4"><?php echo $row['pro_discription'] ?></td>
                     <td class="border p-4"><?php echo $row['pro_added_on'] ?></td>
                     <td class="border p-4"><?php echo $row['pro_updated_on'] ?></td>
-                    <td class="border p-4">
-                        <button class="bg-stone-800 text-white px-4 py-1 rounded hover:bg-blue-700">Update</button>
+                    <td class="border p-2 space-y-1">
+                        <button onclick="" data-pro_id="<?php echo $row['pro_id'] ?>" ; data-pro_name="<?php echo $row['pro_name'] ?>" ;
+                            data-cate_name="<?php echo $row['cate_name'] ?>" ; data-price="<?php echo $row['pro_price'] ?>" ;
+                            data-disc="<?php echo $row['pro_discription'] ?>" ; data-img="admin/<?php echo $row['pro_image'] ?>" ;
+                            data-cate_id="<?php echo $row['cate_id'] ?>" ;
+                            class="update-btn bg-stone-800 text-white px-4 py-1 rounded hover:bg-blue-700">
+                            Update</button>
+
                         <button class="bg-stone-600 text-white px-4 py-1 rounded hover:bg-red-700">
                             <a onclick="return confirmDeleteCategory()"
-                                href="backend/delete_product.php?id=<?php echo $row['id'] ?>">Delete</a>
+                                href="backend/delete_product.php?id=<?php echo $row['pro_id'] ?>">Delete</a>
                         </button>
                     </td>
                 </tr>
+
                 <?php
+                $n++;
             }
+        } else {
+            echo "no product";
         }
     }
 }
@@ -132,7 +144,7 @@ function get_categories()
 {
     include('../../connection.php');
 
-    $sql = "SELECT * FROM mis_category ORDER BY id DESC";
+    $sql = "SELECT * FROM mis_category ORDER BY cate_id DESC";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
         $stmt->execute();
@@ -151,7 +163,7 @@ function get_categories()
                         <button class="bg-stone-800 text-white px-4 py-1 rounded hover:bg-blue-700">Update</button>
                         <button class="bg-stone-600 text-white px-4 py-1 rounded hover:bg-red-700">
                             <a onclick="return confirmDeleteCategory()"
-                                href="backend/delete_category.php?id=<?php echo $row['id'] ?>">Delete</a>
+                                href="backend/delete_category.php?id=<?php echo $row['cate_id'] ?>">Delete</a>
                         </button>
                     </td>
                 </tr>
@@ -159,5 +171,38 @@ function get_categories()
             }
         }
     }
+
+}
+
+
+//update product
+if (isset($_POST['update_product'])) {
+    // image upload
+    $filename = $_FILES["updated_img"]["name"];
+    $tempname = $_FILES["updated_img"]["tmp_name"];
+    $Updated_Image = "../assets/images/uploads/" . $filename;
+    move_uploaded_file($tempname, $Updated_Image);
+
+    $name = $_POST['pro_name'];
+    $cate = $_POST['updated_cate'];
+    $price = $_POST['price'];
+    $disc = $_POST['disc'];
+    $id = $_POST['pro_id'];
+    $updated_on = date('M d, Y');
+
+    $sql = "UPDATE mis_product SET pro_name=?, pro_category=?, pro_price=?, pro_image=?, pro_discription=?, pro_updated_on=? WHERE pro_id=?";
+
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        $stmt->bind_param("siisssi", $name, $cate, $price, $Updated_Image, $disc, $updated_on, $id);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('successfully updated')</script>";
+        } else {
+            echo "<script>alert('Failed to update')</script>";
+        }
+    }
+
+
 
 }

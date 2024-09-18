@@ -2,7 +2,7 @@
 
 
    <!-- footer -->
-    <div>
+    <div class=" w-full">
         Footer
     </div>
 </body>
