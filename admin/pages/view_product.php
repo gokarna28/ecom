@@ -1,11 +1,10 @@
-<?php include('../backend/functions.php') ?>
 <!-- header  -->
 <?php include('../components/header.php') ?>
 
 <!-- sidebar -->
 <?php include('../components/sidebar.php') ?>
 
-<!-- dashboard section -->
+<!-- view product section -->
 <section class="bg-slate-50 flex  items-center justify-center py-24 px-4">
 
     <div class="md:flex hidden w-[20vw]"></div>
@@ -15,7 +14,7 @@
         <!-- product details  -->
         <div class=" space-y-4">
             <h2 class="text-lg font-medium">Product table</h2>
-            <table class="min-w-full border-collapse border border-slate-100 text-left">
+            <table id="product_table" class="min-w-full border-collapse border border-slate-100 text-left">
                 <thead class="bg-stone-800 text-white">
                     <tr>
                         <th class="border-b border-l border-r p-4">S.N</th>
@@ -29,8 +28,8 @@
                         <th class="border-b border-l border-r p-4">Action</th>
                     </tr>
                 </thead>
-                <tbody class="bg-gray-300">
-                    <?php get_product() ?>
+                <tbody id="productData" class="bg-gray-300">
+                    <!-- product data  -->
                 </tbody>
             </table>
 
@@ -63,7 +62,7 @@
 
                                 <option id="current_cate" value=""></option>
                                 <!-- //category name  -->
-                                <?php Product_category_form() ?>
+                               
                             </select>
                         </div>
                     </div>

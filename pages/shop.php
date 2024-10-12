@@ -39,29 +39,24 @@
         </div>
         <!-- right side products -->
         <div class="w-3/4 h-full p-10">
-            <ul>
-                <li class="border w-1/3 flex flex-col bg-slate-50 rounded-[10px] overflow-hidden p-2">
-                    <div class="absolute">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-arrows-rotate"></i>
+            <ul id="productList" class="flex space-x-4">
+                <li class="card-item border w-1/3 flex flex-col bg-slate-50 hover:border-blue-700 rounded-[10px] overflow-hidden p-2">
+                    <div class="product_action_btn absolute py-24 ml-[370px] flex space-y-2 text-white flex-col bg-transparent text-2xl">
+                        <i class="fa-solid fa-cart-shopping bg-stone-900 hover:bg-black rounded-full p-2 flex items-center justify-center"></i>
+                        <i class="fa-regular fa-heart bg-stone-900 hover:bg-black rounded-full p-2 flex items-center justify-center"></i>
+                        <i class="fa-solid fa-arrows-rotate bg-stone-900 hover:bg-black rounded-full p-2 flex items-center justify-center"></i>
                     </div>
-                    <a href="#" class="flex flex-col items-stretched justify-center">
+
+                    <div class="flex flex-col items-stretched justify-center">
+
                         <img src="assets/images/sofa.jpg" alt="Card Image"
-                            class="w-full h-1/2 object-cover rounded-[10px]">
-                        <div>
+                            class="w-full h-[20vw] object-cover rounded-[10px]">
+                        <div class="flex flex-col space-y-2">
                             <p class="text-lg text-gray-400">category name</p>
                             <h2 class="text-xl font-bold">Amazing Sofa</h2>
-                            <div class="text-yellow-500 flex">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
                             <p class="text-lg text-gray-500">Rs.1200</p>
                         </div>
-                    </a>
+                    </div>
 
                 </li>
             </ul>

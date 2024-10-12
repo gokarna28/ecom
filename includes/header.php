@@ -12,7 +12,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
 
 </head>
 
@@ -30,19 +30,6 @@
             <ul class="flex items-center space-x-6">
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Home</a></li>
                 <li class="text-lg font-medium hover:text-blue-600"><a href="pages/shop.php">Shop</a></li>
-                <!-- <li id="categories" class="text-lg font-medium hover:text-blue-600"><a href="#">Categories</a>
-                    <div id="dropdownContent"
-                        class="hidden origin-top-right absolute  w-56 mx-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Link 1</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Link 2</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Link 3</a>
-                        </div>
-                    </div>
-                </li> -->
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">Track Order</a></li>
                 <li class="text-lg font-medium hover:text-blue-600"><a href="/blog.php">Blog</a></li>
                 <li class="text-lg font-medium hover:text-blue-600"><a href="#">About</a></li>
@@ -58,7 +45,7 @@
         <div class="items-center md:flex hidden">
             <div class="flex items-center justify-center space-x-6">
                 <p class="cursor-pointer text-lg font-medium"><i class="fa-solid fa-arrows-rotate text-xl"></i></p>
-                <p class="cursor-pointer text-lg font-medium" id="wishBtn"><i class="fa-regular fa-heart text-xl"></i>
+                <p class="cursor-pointer text-lg font-medium"><i class="fa-regular fa-heart text-xl"></i>
                 </p>
                 <p class="cursor-pointer text-lg font-medium z-30" id="showMenu"><i
                         class="fa-regular fa-user text-xl mr-2"></i>Sign In</p>
