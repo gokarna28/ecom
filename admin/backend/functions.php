@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $proCategory = $_POST['pro_category'];
     $proPrice = $_POST['pro_price'];
     $proDescription = $_POST['pro_discription'];
-    //print_r($_POST); // To see all form data
-
+    //print_r($_POST); 
     //upload image
     $tempname = $_FILES['pro_image']['tmp_name'];
     $filename = $_FILES['pro_image']['name'];
@@ -33,35 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
-
-
-//add category
-$message = "";
-if (isset($_POST['addCategory'])) {
-    $cate_name = $conn->real_escape_string(trim(preg_replace('/\s+/', ' ', strtolower($_POST['cate_name']))));
-    $added_on = date('M d, Y');
-
-    if (empty($cate_name)) {
-        $message = "* category name is required";
-    } else {
-
-        $sql = "INSERT INTO mis_category(cate_name, cate_added_on)VALUES(?,?)";
-        $stmt = $conn->prepare($sql);
-        if ($stmt) {
-            $stmt->bind_param("ss", $cate_name, $added_on);
-
-            if ($stmt->execute()) {
-                echo "<script>alert('Category successfully added')</script>";
-            } else {
-                echo "<script>alert('faliled to add category')</script>";
-            }
-        } else {
-            echo "failed to prepare statemet";
-        }
-    }
-}
-
-
 //categpory name and id retrive for the product form dropdown
 if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && $_GET['type'] === 'categories') {
 
@@ -79,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && $_GET['type']
         } else {
             echo "no category";
         }
-    }else{
+    } else {
         echo "failed to prepare the statement";
     }
 }
@@ -107,4 +77,73 @@ if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && $_GET['type']
             echo "no product";
         }
     }
+}
+
+
+//get the all the data form category and products for update form
+if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && $_GET['type'] === 'productscategories') {
+
+    // Fetch categories
+    $sqlCategories = "SELECT * FROM mis_category";
+    $stmtCategories = $conn->prepare($sqlCategories);
+
+    $categories = [];
+    if ($stmtCategories) {
+        $stmtCategories->execute();
+        $resultCategories = $stmtCategories->get_result();
+
+        if ($resultCategories->num_rows > 0) {
+            while ($row = $resultCategories->fetch_assoc()) {
+                $categories[] = $row;
+            }
+        }
+    }
+
+    // Fetch products
+    $sqlProducts = "SELECT * FROM mis_product";
+    $stmtProducts = $conn->prepare($sqlProducts);
+
+    $products = [];
+    if ($stmtProducts) {
+        $stmtProducts->execute();
+        $resultProducts = $stmtProducts->get_result();
+
+        if ($resultProducts->num_rows > 0) {
+            while ($row = $resultProducts->fetch_assoc()) {
+                $products[] = $row;
+            }
+        }
+    }
+
+    // Send a combined response
+    header('Content-Type: application/json');
+    echo json_encode([
+        'categories' => $categories,
+        'products' => $products
+    ]);
+}
+
+// add categories
+if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['type']=='addCategory') {
+
+    echo $cate_name=$_POST['cate_name'];
+    echo $added_on = date('M d, Y');
+
+    // $data = json_decode(file_get_contents('php://input'), true);
+    // print_r($data);
+
+    // $sql = "INSERT INTO mis_category(cate_name, cate_addedPon) VALUES(?,?,?)";
+    // $stmt = $conn->prepare($sql);
+    // if ($stmt) {
+    //     $stmt->bind_param("ss", $cate_name, $added_on);
+
+    //     if ($stmt->execute()) {
+    //         echo "successfully added category";
+    //     } else {
+    //         echo "Failed to add the category";
+    //     }
+    // } else {
+    //     echo "something went wrong";
+    // }
+
 }

@@ -64,3 +64,33 @@
 
 // }
 
+
+
+data-pro_id="${item.pro_id}" ;
+                         data-pro_name="${item.pro_name}" ;
+                            data-cate_name="${item.cate_name}" ;
+                             data-price="${item.pro_price}" ;
+                            data-disc="${item.pro_discription}" ;
+                             data-img="${item.pro_image}" ;
+                            data-cate_id="${item.cate_id}" ;
+
+
+// let update_params={
+      //   pro_name:proName,
+      //   pro_category:proCategory,
+      //   pro_price:proPrice,
+      //   pro_image:proImage,
+      //   pro_discription:proDescription,
+      // };
+
+      
+      // var http_update = new XMLHttpRequest();
+      // http_update.open("POST", "backend/functions.php", true);
+
+      // http_update.onreadystatechange = function () {
+      //   if (http_update.readyState == 4 && http_update.status == 200) {
+      //     document.getElementById("productResponse").innerHTML = http_update.responseText;
+      //   }
+      // };
+
+      // http_update.send(JSON.encode(update_params));

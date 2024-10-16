@@ -1,5 +1,3 @@
-<?php include('../backend/functions.php') ?>
-
 <!-- header  -->
 <?php include('../components/header.php') ?>
 
@@ -17,16 +15,14 @@
         <div class="bg-slate-200 p-4 rounded-md">
             <h2 class="text-lg font-medium">Fill all the category details</h2>
 
-            <form action="" method="post" enctype="multipart/form-data">
+            <form id="add_category_form">
                 <div class="w-full space-y-4 p-4 ">
                     <div class="flex md:flex-row flex-col  md:items-center items-start w-1/2 md:space-x-6">
                         <div class="flex flex-col w-full space-y-2 text-lg">
                             <label>category Name</label>
-                            <span class="text-red-500 text-sm"><?php echo $message?></span>
-                            <input class="w-full px-4 py-1 rounded-md border border-slate-300" type="text"
-                                name="cate_name" placeholder="Name">
+                            <input name="cate_name" class="w-full px-4 py-1 rounded-md border border-slate-300" type="text"
+                                id="cate_name" placeholder="Name">
                         </div>
-
                     </div>
                     <div class="w-full flex justify-start">
                         <button type="submit" name="addCategory"
@@ -51,7 +47,7 @@
                     </tr>
                 </thead>
                 <tbody class="bg-gray-300">
-                    <?php get_categories()?>
+                    <!-- category table here -->
                 </tbody>
             </table>
 
